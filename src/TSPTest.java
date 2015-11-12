@@ -12,20 +12,22 @@ public class TSPTest {
 
 		int n;
 		System.out.println("Please enter number of cities: integer between 1 and 7");
-		Scanner scan=new Scanner(System.in);
-		n=scan.nextInt();
-		if(n<1||n>7)
+		Scanner scan = new Scanner(System.in);
+		n = scan.nextInt();
+		if(n < 1 || n > 7) {
 			System.out.println("invalid number of cities.");
+		}
+		
 		else{
 			
-			JFrame frame=new TSPFrame(n);
+			JFrame frame = new TSPFrame(n);
 			frame.setTitle("Traveling Salesman Path");
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			
 			frame.pack();
 			frame.setVisible(true);
 		
 		}
+		scan.close();
 	}
 
 }
